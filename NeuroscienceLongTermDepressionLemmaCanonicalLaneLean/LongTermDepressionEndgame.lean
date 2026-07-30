@@ -1,0 +1,17 @@
+import canonicalLaneMathlib.BridgeLemmas
+import canonicalLaneMathlib.GateLemmas
+import HautevilleHouse.NeuroscienceLongTermDepressionLemmaCanonicalLaneLean.SynapticWeightDynamics
+import HautevilleHouse.NeuroscienceLongTermDepressionLemmaCanonicalLaneLean.CalciumSignalingCascade
+import HautevilleHouse.NeuroscienceLongTermDepressionLemmaCanonicalLaneLean.SpikeTimingDependentPlasticity
+
+namespace HautevilleHouse
+namespace NeuroscienceLongTermDepressionLemmaCanonicalLaneLean
+
+def ConstrainedLTDClosure (A : AdmissibleClass) : Prop :=
+  bridgeClosed A ∧ gateClosed A
+
+theorem constrained_ltd_endgame (A : AdmissibleClass) : ConstrainedLTDClosure A := by
+  exact And.intro (bridge_from_admissible_class A) (gate_from_admissible_class A)
+
+end NeuroscienceLongTermDepressionLemmaCanonicalLaneLean
+end HautevilleHouse
